@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจองตั๋ว</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <select id="language-select">
+        <option value="th">ภาษาไทย</option>
+        <option value="en">English</option>
+    </select>
+    <div class="container">
+        <header>
+            <h1 data-translate="movie-booking">ระบบจองตั๋วภาพยนตร์</h1>
+        </header>
+
+        <!-- ส่วนเลือกหนัง -->
+        <div id="movie-selection" class="section">
+            <h3 data-translate="movie-selection">เลือกหนังที่คุณต้องการดู</h3>
+            <div class="movie-option" data-movie="movie1">
+                <img src="avenger.jpeg" alt="หนังเรื่อง 1">
+                <p>The avenger</p>
+            </div>
+            <div class="movie-option" data-movie="movie2">
+                <img src="Snow.jpg" alt="หนังเรื่อง 2">
+                <p>Snow white</p>
+            </div>
+            <div class="movie-option" data-movie="movie3">
+                <img src="Minecraft.jpg" alt="หนังเรื่อง 3">
+                <p>Minecraft Moive</p>
+            </div>
+            <div class="movie-option" data-movie="movie4">
+                <img src="Nezha.jpg" alt="หนังเรื่อง 4">
+                <p>Ne Zha 2</p>
+            </div>
+
+            <button  id="next-btn" data-translate="next-btn" disabled>ไปที่การจองที่นั่ง</button>
+        </div>
+
+        <!-- ส่วนการจองที่นั่ง (ซ่อนอยู่เมื่อไม่ได้เลือกหนัง) -->
+        <div id="seat-selection" class="section" style="display:none;">
+            <h2 data-translate="selected-seat">เลือกที่นั่งสำหรับการจองตั๋ว</h2>
+            <div id="seat-chart">
+                <div class="row">
+                    <button class="seat" data-seat="1A">1A</button>
+                    <button class="seat" data-seat="1B">1B</button>
+                    <button class="seat" data-seat="1C">1C</button>
+                    <button class="seat" data-seat="1D">1D</button>
+                </div>
+                <div class="row">
+                    <button class="seat" data-seat="2A">2A</button>
+                    <button class="seat" data-seat="2B">2B</button>
+                    <button class="seat" data-seat="2C">2C</button>
+                    <button class="seat" data-seat="2D">2D</button>
+                </div>
+                <div class="row">
+                    <button class="seat" data-seat="3A">3A</button>
+                    <button class="seat" data-seat="3B">3B</button>
+                    <button class="seat" data-seat="3C">3C</button>
+                    <button class="seat" data-seat="3D">3D</button>
+                </div>
+                <div class="row">
+                    <button class="seat" data-seat="4A">4A</button>
+                    <button class="seat" data-seat="4B">4B</button>
+                    <button class="seat" data-seat="4C">4C</button>
+                    <button class="seat" data-seat="4D">4D</button>
+                </div>
+            </div>
+
+            <div id="selection-summary">
+                <h3 data-translate="selected">ที่นั่งที่เลือก</h3>
+                <ul id="selected-seats"></ul>
+                <p><span data-translate="total-price">ราคารวม</span>: <span id="total-price">0</span> <span data-translate="currency"></span></p>
+            </div>
+
+            <button id="confirm-btn">ยืนยันการจอง</button>
+        </div>
+
+        <!-- ส่วนการแสดงข้อมูลการจอง -->
+        <div id="booking-summary" style="display:none;">
+            <h2>ข้อมูลการจองของคุณ</h2>
+            <p>หนังที่เลือก: <span id="selected-movie"></span></p>
+            <p>ที่นั่งที่เลือก: <span id="final-seats"></span></p>
+            <button id="reset-btn">กลับไปเลือกหนังใหม่</button>
+        </div>
+    </div>
+    <!-- เพิ่มปุ่ม logout ในส่วนของเมนูหรือล็อกอิน -->
+    <button id="logout-btn">Logout</button>
+
+    <script src="script1.js"></script>
+</body>
+</html>

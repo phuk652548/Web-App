@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+
+    <!-- Login Form -->
+    <div class="login-container" id="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" id="login-form-submit">Login</button>
+            <p id="login-error-msg" style="display: none;">Invalid username or password</p>
+            <p id="register-link">Don't have an account? <a href="#" id="show-register">Sign up here</a></p>
+        </form>
+    </div>
+
+    <!-- Register Form -->
+    <div class="login-container" id="register-container" style="display: none;">
+        <h1>Signup</h1>
+        <form id="register-form">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Username" required><br>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required><br>
+            </div>
+            <button type="submit" id="register-form-submit">Sign Up</button>
+            <p id="register-error-msg" style="display: none;">Username already exists</p>
+            Already have an account?<a href="#" id="show-login">Login here</a>
+        </form>
+        <script src="script.js"></script>
+    </div>
+      
+</body>
+</html>
